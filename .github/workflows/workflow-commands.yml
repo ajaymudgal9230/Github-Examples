@@ -5,7 +5,7 @@ on: ['push']
 jobs:
   my-job:
     runs-on: ubuntu-latest
-      steps:
+      steps: 
         - name: "Group Logging"
           run: |
             echo "::group::my group message"
