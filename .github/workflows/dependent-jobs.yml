@@ -1,0 +1,18 @@
+name: "Dependent Jobs"
+
+on: [ 'push' ]
+
+jobs:
+  job2:
+    need: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: "StepA"
+        run: |
+         echo "World"
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "StepB"
+        run: |
+         echo "Hello"
